@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>BTC US/KR scraper</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<script>$( ".kr" ).append( "<p>Test</p>" );</script>
+<script>
+$(document).ready(function() {
+$.get( "kp.txt", function( data ) {
+  $( "#kr" ).html( data );
+
+});
+
+}); 
+</script>
+
+<script>
+$(document).ready(function() {
+$.get( "us.txt", function( data ) {
+  $( "#sam" ).html( data );
+
+});
+
+}); 
+</script>
+<script>
+$(document).ready(function() {
+
+$.get( "kr.txt", function( da ) {
+
+
+$.get( "sam.txt", function( d1 ) {
+
+
+var kpv = da;
+var usa = d1;
+mad = parseFloat(100-(parseFloat(d1)/(parseFloat(kpv)/100))).toFixed(2);
+$( "#math" ).html( mad );
+});
+
+
+
+});
+}); 
+</script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">Theory</a>
+
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h1>BTC scraper banner</h1>
+				<p></p>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper">
+				<div class="inner">
+					<div class="flex flex-3">
+						<article >
+						<h2>Korea BTC Price:</h2> <br>
+						<article id="kr"></article>
+
+						</article>
+						<article >
+						<h3> Diference percentage</h3>
+						<article id="math"></article>
+						</article>
+						<article>
+						<h2>US BTC Price:</h2> <br>
+						<article id="sam"></article>
+							<header>
+						</article>
+						
+
+					</div>
+				</div>
+			</section>
+
+		<!-- Scripts -->
+
+
+
+</script>
+	</body>
+</html>
