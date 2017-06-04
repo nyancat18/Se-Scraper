@@ -51,6 +51,85 @@ $( "#math" ).html( mad );
 });
 }); 
 </script>
+<script>
+$(document).ready(function() {
+$.get( "ekp.txt", function( data ) {
+  $( "#ekr" ).html( data );
+
+});
+
+}); 
+</script>
+
+<script>
+$(document).ready(function() {
+$.get( "eus.txt", function( data ) {
+  $( "#esam" ).html( data );
+
+});
+
+}); 
+</script>
+<script>
+$(document).ready(function() {
+
+$.get( "ekr.txt", function( db ) {
+
+
+$.get( "esam.txt", function( d2 ) {
+
+
+var kpv = db;
+var usa = d2;
+mad = parseFloat(100-(parseFloat(d2)/(parseFloat(kpv)/100))).toFixed(2);
+$( "#emath" ).html( mad );
+});
+
+
+
+});
+}); 
+</script>
+<script>
+$(document).ready(function() {
+$.get( "xkp.txt", function( data ) {
+  $( "#xkr" ).html( data );
+
+});
+
+}); 
+</script>
+
+<script>
+$(document).ready(function() {
+$.get( "xu.txt", function( data ) {
+  $( "#xsam" ).html( data );
+
+});
+
+}); 
+</script>
+<script>
+$(document).ready(function() {
+
+$.get( "xkr.txt", function( dc ) {
+
+
+$.get( "xu.txt", function( d3 ) {
+
+
+var kpv = dc;
+var usa = d3;
+mad = parseFloat(100-(parseFloat(d3)/(parseFloat(kpv)/100))).toFixed(2);
+$( "#xmath" ).html( mad );
+});
+
+
+
+});
+}); 
+</script>
+
 	</head>
 	<body>
 
@@ -92,6 +171,57 @@ $( "#math" ).html( mad );
 					</div>
 				</div>
 			</section>
+			<br>
+
+
+
+			<section id="one" class="wrapper">
+				<div class="inner">
+					<div class="flex flex-3">
+						<article >
+						<h2>Korea ETC Price:</h2> <br>
+						<article id="ekr"></article>
+
+						</article>
+						<article >
+						<h3> Diference percentage</h3>
+						<article id="emath"></article>
+						</article>
+						<article>
+						<h2>US ETC Price:</h2> <br>
+						<article id="esam"></article>
+							<header>
+						</article>
+						
+
+					</div>
+				</div>
+			</section>
+<br>
+
+			<section id="one" class="wrapper">
+				<div class="inner">
+					<div class="flex flex-3">
+						<article >
+						<h2>Korea XRP Price:</h2> <br>
+						<article id="xkr"></article>
+
+						</article>
+						<article >
+						<h3> Diference percentage</h3>
+						<article id="xmath"></article>
+						</article>
+						<article>
+						<h2>US XRP Price:</h2> <br>
+						<article id="xsam"></article>
+							<header>
+						</article>
+						
+
+					</div>
+				</div>
+			</section>
+
 
 		<!-- Scripts -->
 
